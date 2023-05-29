@@ -2,11 +2,11 @@
 
 This repository contains the source code for the paper: [Joint Appearance and Motion Learning for Efficient Rolling Shutter Correction (CVPR2023)](https://openaccess.thecvf.com/content/CVPR2023/papers/Fan_Joint_Appearance_and_Motion_Learning_for_Efficient_Rolling_Shutter_Correction_CVPR_2023_paper.pdf).
 Rolling shutter correction (RSC) is becoming increasingly popular for RS cameras that are widely used in commercial and industrial applications. Despite the promising performance, existing RSC methods typically employ a two-stage network structure that ignores intrinsic information interactions and hinders fast inference. In this paper, we propose a **single-stage** encoder-decoder-based network, named **JAMNet**, for efficient RSC. It first extracts pyramid features from consecutive RS inputs, and then simultaneously refines the two complementary information (i.e., global shutter appearance and undistortion motion field) to achieve mutual promotion in a joint learning decoder. To inject sufficient motion cues for guiding joint learning, we introduce a transformer-based motion embedding module and propose to pass hidden states across pyramid levels. 
-Moreover, we present a new data augmentation strategy **vertical flip + inverse order** to release the potential of the RSC datasets. Experiments on various benchmarks show that our approach surpasses the state-of-the-art methods by a large margin, especially with a 4.7 dB PSNR leap on real-world RSC. Further, our network achieves **real-time inference for the first time** (**28ms** for 640×480 input in a single RTX 3090 GPU) and enjoys a flexible design. 
+Moreover, we present a new data augmentation strategy **vertical flip + inverse order** to release the potential of the RSC datasets. Experiments on various benchmarks show that our approach surpasses the state-of-the-art methods by a large margin, especially with a 4.7 dB PSNR leap on real-world RSC. Further, our network **achieves real-time inference for the first time** (**28ms** for 640×480 input in a single RTX 3090 GPU) and enjoys a flexible design. 
 
-<img src="result_demo/network.png" width="92%"/>
+<img src="result_demo/network.png" width="97%"/>
 
-<img src="result_demo/compare_sota_bsrsc.png" width="99%"/> 
+<img src="result_demo/compare_sota_bsrsc.png" width="100%"/> 
 
 ## Installation
 The code is tested with PyTorch 1.9.1 with CUDA 11.4.
